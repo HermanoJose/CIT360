@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Sandbox {
+public class SetSandbox {
 
     public static void main(String[] args) {
         // happy path - adding names to a linkedhashset

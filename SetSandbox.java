@@ -91,27 +91,15 @@ public class SetSandbox {
         }
 
 
-        // nasty path - removing the min_value
-        setD.remove(Integer.MIN_VALUE);
-
-        System.out.println("\n---Nasty Path---");
-        // it doesn't make any changes
-        Iterator iteratorD4 = setD.iterator();
-        while (iteratorD4.hasNext()) {
-            System.out.print(iteratorD4.next() + " ");
-        }
-
-
         LinkedHashSet <String> setE = new LinkedHashSet <String>();
-
-        // populate hash set
+        // happy path - adding names to a linkedhashset
         setE.add("Ayancy");
         setE.add("Heather");
         setE.add("Travis");
 
-        // check the existence of element
+        // checking to see if Heather is contained in setE
         boolean exist = setE.contains("Heather");
-
+        // exist displays as true because Heather is in setE
         System.out.println("\n\nDoes setD contain 'Heather'? "+ exist);
     }
 }

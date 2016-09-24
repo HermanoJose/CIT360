@@ -6,12 +6,12 @@ public class treeset {
     public static void main(String[] args) {
         System.out.println("Tree Set Example!\n");
         TreeSet<Integer> tree = new TreeSet<Integer>();
-        tree.add(12);
-        tree.add(63);
+        tree.add(10);
+        tree.add(89);
         tree.add(34);
         tree.add(45);
 
-        // sorts data, 63 is the last element. see output below
+        // sorts data, 89 is the last element. see output below
         Iterator<Integer> iterator = tree.iterator();
         System.out.print("Tree set data: ");
 

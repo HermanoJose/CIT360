@@ -4,7 +4,7 @@ import java.util.TreeSet;
 public class treeset {
 
     public static void main(String[] args) {
-        System.out.println("Tree Set Example!\n");
+        System.out.println("Java Collections: Tree Set Example!\n");
         TreeSet<Integer> tree = new TreeSet<Integer>();
         tree.add(10);
         tree.add(89);

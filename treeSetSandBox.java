@@ -3,7 +3,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * Created by Ayancy on 10/4/2016.
+ * Created by Ayancy on 10/4/2016.  no nasty paths added yet
  */
 public class treeSetSandBox {public static void main(String[] args) {
 
@@ -14,15 +14,7 @@ public class treeSetSandBox {public static void main(String[] args) {
     Set<Integer> c = new TreeSet<Integer>(a);
     c.addAll(b);
     System.out.println(c);
-
-    //Nasty path add a
-    try {
-        Set.add(null);
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-
-
+    
 
     //happy path create intersection
     Set<Integer> d = new TreeSet<Integer>(a);

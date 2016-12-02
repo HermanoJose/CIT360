@@ -10,11 +10,12 @@ import org.hibernate.service.ServiceRegistry;
 public class HibernateConfig
 
 {
-
     private SessionFactory sessionFactory;
 
     public HibernateConfig() {
+        System.out.println("Creating config");
         Configuration config = new Configuration();
+        System.out.println("Config Created");
 
         config.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
 
@@ -22,7 +23,7 @@ public class HibernateConfig
 
         //change the next line of code to match your MySQL URL and port
 
-        config.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:8889/test");
+        config.setProperty("hibernate.connection.url", "jdbc:mysql://localhost:8889/mealApp?useSSL=false");
 
         //change the next two lines of code to match your MySQL user name and password.
 

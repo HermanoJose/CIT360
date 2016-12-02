@@ -12,6 +12,9 @@ public class FoodHandler implements Handler{
         String todayDate = (String)dataMap.get("date");
         FoodModel theModel = (FoodModel)dataMap.get("model");
         Food foundFood = theModel.getFood(todayDate);
+        if (foundFood == null) {
+            foundFood.setName("Not Available");
+        }
         HashMap<String, Object> responseMap = new HashMap<>();
         JSONOutputStream outToClient = (JSONOutputStream)dataMap.get("toClient");
         try {

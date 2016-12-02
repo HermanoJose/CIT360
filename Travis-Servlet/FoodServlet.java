@@ -12,7 +12,7 @@ import java.util.HashMap;
 /**
  * Created by Joseph on 12/1/16.
  */
-@WebServlet(name = "FoodServlet")
+@WebServlet(name = "FoodServlet", urlPatterns = {"/Food"})
 public class FoodServlet extends HttpServlet {
     private ApplicationController theAppController = new ApplicationController();
     private FoodModel theModel = new FoodModel();
@@ -23,6 +23,14 @@ public class FoodServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
+//            JSONInputStream inFromClient = new JSONInputStream(request.getInputStream());
+//            JSONOutputStream outToClient = new JSONOutputStream(response.getOutputStream());
+//            Object clientObject = inFromClient.readObject();
+//
+//            System.out.println(clientObject);
+//            String bye = "GoodBye";
+//            outToClient.writeObject(bye);
+
             JSONInputStream inFromClient = new JSONInputStream(request.getInputStream());
             JSONOutputStream outToClient = new JSONOutputStream(response.getOutputStream());
             HashMap<String, Object> dataMap = (HashMap)inFromClient.readObject();
